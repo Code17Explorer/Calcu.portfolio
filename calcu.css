@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452); 
+}
+
+/* Calculator Container */
+.calculator { 
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+    position: relative;
+    animation: runningMulticolorBorder 4s linear infinite; /* Apply running border animation */
+}
+
+/* Animated multicolor running border for the calculator */
+@keyframes runningMulticolorBorder {
+    0% {
+        border-top: 5px solid #ff0000;
+        border-right: 5px solid #ff9900;
+        border-bottom: 5px solid #33cc33;
+        border-left: 5px solid #0066cc;
+    }
+    15% {
+        border-top: 5px solid #0066cc;
+        border-right: 5px solid #ff0000;
+        border-bottom: 5px solid #ff9900;
+        border-left: 5px solid #33cc33;
+    }
+    25% {
+        border-top: 5px solid #33cc33;
+        border-right: 5px solid #0066cc;
+        border-bottom: 5px solid #ff0000;
+        border-left: 5px solid #ff9900;
+    }
+    40% {
+        border-top: 5px solid #ff9900;
+        border-right: 5px solid #33cc33;
+        border-bottom: 5px solid #0066cc;
+        border-left: 5px solid #ff0000;
+    }
+    55% {
+        border-top: 5px solid #ff0000;
+        border-right: 5px solid #ff9900;
+        border-bottom: 5px solid #33cc33;
+        border-left: 5px solid #0066cc;
+    }
+
+    70% {
+        border-top: 5px solid #ff0000;
+        border-right: 5px solid #ff9900;
+        border-bottom: 5px solid #33cc33;
+        border-left: 5px solid #0066cc;
+    }
+
+    85% {
+        border-top: 5px solid #0066cc;
+        border-right: 5px solid #ff0000;
+        border-bottom: 5px solid #ff9900;
+        border-left: 5px solid #33cc33;
+    }
+
+    100% {
+        border-top: 5px solid #33cc33;
+        border-right: 5px solid #0066cc;
+        border-bottom: 5px solid #ff0000;
+        border-left: 5px solid #ff9900;
+    }
+}
+
+/* Input field style */
+input {
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Placeholder style */
+input::placeholder {
+    color: #ffffff;
+}
+
+/* Animated running border effect for input fields */
+input:focus {
+    animation: rangBirangaBorder 1.5s linear infinite, runningBorder 2s linear infinite;
+}
+
+/* Animated colorful rang biranga border effect for input fields */
+@keyframes rangBirangaBorder {
+    0% { border: 2px solid #ff0000; }
+    16% { border: 2px solid #ff9900; }
+    33% { border: 2px solid #33cc33; }
+    50% { border: 2px solid #0066cc; }
+    66% { border: 2px solid #9900cc; }
+    83% { border: 2px solid #ff0099; }
+    100% { border: 2px solid #ff0000; }
+}
+
+/* Add running border animation for input fields */
+@keyframes runningBorder {
+    0% {
+        border-top: 5px solid #ff0000;
+        border-right: 5px solid #ff9900;
+        border-bottom: 5px solid #33cc33;
+        border-left: 5px solid #0066cc;
+    }
+    25% {
+        border-top: 5px solid #0066cc;
+        border-right: 5px solid #ff0000;
+        border-bottom: 5px solid #ff9900;
+        border-left: 5px solid #33cc33;
+    }
+    50% {
+        border-top: 5px solid #33cc33;
+        border-right: 5px solid #0066cc;
+        border-bottom: 5px solid #ff0000;
+        border-left: 5px solid #ff9900;
+    }
+    75% {
+        border-top: 5px solid #ff9900;
+        border-right: 5px solid #33cc33;
+        border-bottom: 5px solid #0066cc;
+        border-left: 5px solid #ff0000;
+    }
+    100% {
+        border-top: 5px solid #ff0000;
+        border-right: 5px solid #ff9900;
+        border-bottom: 5px solid #33cc33;
+        border-left: 5px solid #0066cc;
+    }
+}
+
+/* Button style */
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Animated running border effect for buttons */
+button:focus {
+    animation: rangBirangaBorder 1.5s linear infinite, runningBorder 2s linear infinite;
+}
+
+/* Keyframe animation for colorful rang biranga button borders */
+@keyframes rangBirangaBorder {
+    0% { border: 2px solid #ff0000; }
+    16% { border: 2px solid #ff9900; }
+    33% { border: 2px solid #33cc33; }
+    50% { border: 2px solid #0066cc; }
+    66% { border: 2px solid #9900cc; }
+    83% { border: 2px solid #ff0099; }
+    100% { border: 2px solid #ff0000; }
+}  
